@@ -7,13 +7,12 @@ RSpec.describe RadixTree do
     {
       'she' => 1,
       'sells' => 2,
-      'sea' => 3,
-      'shells' => 4,
-      'and' => 5,
-      'beer' => 6,
-      'by' => 7,
-      'the' => 8,
-      'see' => 9
+      'seashells' => 3,
+      'and' => 4,
+      'beer' => 5,
+      'by' => 6,
+      'the' => 7,
+      'see' => 8
     }
   end
 
@@ -44,7 +43,7 @@ RSpec.describe RadixTree do
   describe '#items' do
     context 'with prefix' do
       it 'returns only matched items' do
-        expect(subject.items('b')).to eql [['beer', 6], ['by', 7]]
+        expect(subject.items('b')).to eql [['beer', 5], ['by', 6]]
       end
     end
 
